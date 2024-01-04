@@ -9,6 +9,6 @@ export default function handleProfileSignup() {
     })
     .catch(() => {
       // Log error message in case of an error
-      console.error('Signup system offline');
+      console.log('Signup system offline');
     });
 }
