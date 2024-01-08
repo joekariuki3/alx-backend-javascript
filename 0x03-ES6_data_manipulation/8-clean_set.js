@@ -5,5 +5,4 @@ export default function cleanSet(set, startString) {
       .map((value) => value.substring(startString.length));
     return filteredValues.join('-');
   }
-  return '';
 }
