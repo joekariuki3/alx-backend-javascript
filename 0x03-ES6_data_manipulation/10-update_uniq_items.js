@@ -1,6 +1,6 @@
 export default function updateUniqueItems(data) {
-  if (typeof data !== 'object') {
-    return new Error('Cannot process');
+  if (!(data instanceof Map)) {
+    throw new Error('Cannot process');
   }
 
   data.forEach((value, key) => {
