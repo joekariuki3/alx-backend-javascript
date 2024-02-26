@@ -1,3 +1,5 @@
+// Fuction to print a message
+
 function displayMessage(message) {
   console.log(message);
 };
