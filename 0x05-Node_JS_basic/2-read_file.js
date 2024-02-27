@@ -3,14 +3,14 @@
 const fs = require('fs');
 
 function countStudents(path) {
-  const studentObjList = [];
-  let studentList = [];
-  let keys = [];
   fs.readFile(path, 'utf8', (error, data) => {
     // file not present
     if (error) {
       throw new Error('Cannot load the database');
     }
+    const studentObjList = [];
+    let studentList = [];
+    let keys = [];
     // file found fix the data line by line
     studentList = data.split('\n');
     // make student object
@@ -38,13 +38,15 @@ function countStudents(path) {
         uniqFields[key].push(value);
       }
     }
-
     // list students in each filed
     const uniqFieldsKeys = Object.keys(uniqFields);
     for (let l = 0; l < uniqFieldsKeys.length; l += 1) {
-      console.log(`Number of students in ${uniqFieldsKeys[l]}: ${uniqFields[uniqFieldsKeys[l]].length}. List: ${uniqFields[uniqFieldsKeys[l]]}`);
+      console.log(
+        `Number of students in ${uniqFieldsKeys[l]}: ${
+          uniqFields[uniqFieldsKeys[l]].length
+        }. List: ${uniqFields[uniqFieldsKeys[l]]}`,
+      );
     }
   });
 }
-
 module.exports = countStudents;
