@@ -32,7 +32,7 @@ function countStudents(path) {
       const key = studentObjList[k].field;
       const value = studentObjList[k].firstname;
       if (key in uniqFields) {
-        uniqFields[key].push(` ${value}`);
+        uniqFields[key].push(value);
       } else {
         uniqFields[key] = [];
         uniqFields[key].push(value);
