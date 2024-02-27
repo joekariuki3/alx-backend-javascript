@@ -8,7 +8,9 @@ function countStudents(path) {
   let keys = [];
   fs.readFile(path, 'utf8', (error, data) => {
     // file not present
-    if (error) { throw new Error('Cannot load the database'); }
+    if (error) {
+      throw new Error('Cannot load the database');
+    }
     // file found fix the data line by line
     studentList = data.split('\n');
     // make student object
