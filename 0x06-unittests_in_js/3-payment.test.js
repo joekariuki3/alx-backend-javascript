@@ -1,11 +1,11 @@
-const Utils = require("./utils");
-const sendPaymentRequestToApi = require("./3-payment.js");
-const sinon = require("sinon");
+const Utils = require('./utils');
+const sendPaymentRequestToApi = require('./3-payment.js');
+const sinon = require('sinon');
 const spy = sinon.spy;
-const expect = require("chai").expect;
+const expect = require('chai').expect;
 
-describe("sendPaymentRequestToApi", function () {
-  it("calculateNumber method of Utils has been used", () => {
+describe('sendPaymentRequestToApi', function () {
+  it('calculateNumber method of Utils has been used', () => {
     const result = spy(Utils);
     
 	sendPaymentRequestToApi(100, 20);
