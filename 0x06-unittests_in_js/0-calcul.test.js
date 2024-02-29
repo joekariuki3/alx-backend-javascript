@@ -3,7 +3,7 @@ const calculateNumber = require('./0-calcul.js');
 describe("CalculateNumber", function() {
   it("test arguments are rounded", function() {
     const answer = calculateNumber(1.1, 2.8);
-    assert.equal(answer, 4)
+    assert.equal(answer, 4);
   });
   it("test correct output", function() {
     const answer = calculateNumber(1,2);

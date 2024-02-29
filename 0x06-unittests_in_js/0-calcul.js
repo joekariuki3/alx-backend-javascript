@@ -4,4 +4,4 @@ function calculateNumber(a, b) {
   let answer = a + b;
   return answer;
 }
-module.exports = calculateNumber
+module.exports = calculateNumber;
