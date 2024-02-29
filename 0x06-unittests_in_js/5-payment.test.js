@@ -20,7 +20,6 @@ describe('sendPaymentRequestToApi', () => {
   });
   it('call sendPaymentRequestToAPI with 10, and 10', () => {
 
-
     sendPaymentRequestToApi(10, 10);
     expect(spy.log.calledWith('The total is: 20')).to.be.true;
     expect(spy.log.callCount).to.be.equal(1);
