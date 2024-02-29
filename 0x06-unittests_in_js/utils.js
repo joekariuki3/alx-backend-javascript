@@ -7,12 +7,10 @@ const Utils = {
       return Math.round(a) - Math.round(b);
     }
     if (type === 'DIVIDE') {
-      if (Math.round(b) === 0) {
-        return 'ERROR';
-      }
-      return Math.round(a) / Math.round(b);
+      return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
     }
     return 0;
   },
 };
+
 module.exports = Utils;
