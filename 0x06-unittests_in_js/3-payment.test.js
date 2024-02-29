@@ -1,5 +1,4 @@
 const Utils = require("./utils");
-const calculateNumber = Utils.calculateNumber;
 const sendPaymentRequestToApi = require("./3-payment.js");
 const sinon = require("sinon");
 const spy = sinon.spy;
