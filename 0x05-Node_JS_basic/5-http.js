@@ -51,13 +51,15 @@ const app = http.createServer((req, res) => {
       let CSNames = '';
       let SWENames = '';
       for (const field in data) {
-        if (field === 'CS') {
-          NoCS = data[field].length;
-          CSNames = data[field].map((student) => student.firstname).join(', ');
-        }
-        if (field === 'SWE') {
-          NoSWE = data[field].length;
-          SWENames = data[field].map((student) => student.firstname).join(', ');
+        if (Object.prototype.hasOwnProperty.call(data, field)) {
+          if (field === 'CS') {
+            NoCS = data[field].length;
+            CSNames = data[field].map((student) => student.firstname).join(', ');
+          }
+          if (field === 'SWE') {
+            NoSWE = data[field].length;
+            SWENames = data[field].map((student) => student.firstname).join(', ');
+          }
         }
       }
       res.end(`This is the list of our students\nNumber of students: ${NoSWE + NoCS}\nNumber of students in CS: ${NoCS}. List: ${CSNames}\nNumber of students in SWE: ${NoSWE}. List: ${SWENames}`);
