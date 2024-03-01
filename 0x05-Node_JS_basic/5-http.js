@@ -60,7 +60,7 @@ const app = http.createServer((req, res) => {
           SWENames = data[field].map((student) => student.firstname).join(', ');
         }
       }
-      res.end(`This is the list of our students \nNumber of students: ${NoSWE + NoCS} \nNumber of students in CS: ${NoCS}. List: ${CSNames} \nNumber of students in SWE: ${NoSWE}. List: ${SWENames}`);
+      res.end(`This is the list of our students\nNumber of students: ${NoSWE + NoCS}\nNumber of students in CS: ${NoCS}. List: ${CSNames}\nNumber of students in SWE: ${NoSWE}. List: ${SWENames}`);
     }).catch(() => {
       res.statusCode = 404;
       res.end('Cannot load the database');
