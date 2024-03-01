@@ -29,16 +29,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
           .map((propName, idx) => [propName, studentPropValues[idx]]);
         studentGroups[field].push(Object.fromEntries(studentEntries));
       }
-
-      const totalStudents = Object
-        .values(studentGroups)
-        .reduce((pre, cur) => (pre || []).length + cur.length);
-      console.log(`Number of students: ${totalStudents}`);
-      for (const [field, group] of Object.entries(studentGroups)) {
-        const studentNames = group.map((student) => student.firstname).join(', ');
-        console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
-      }
-      resolve(true);
+      resolve(studentGroups);
     }
   });
 });
@@ -48,8 +39,28 @@ app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
 app.get('/students', (req, res) => {
-  const data = countStudents(database);
-  res.send(`This is the list of our students \n ${data}`);
+  countStudents(database).then((data) => {
+    let NoCS = 0;
+    let NoSWE = 0;
+    let CSNames = '';
+    let SWENames = '';
+    for (const field in data) {
+      if (Object.prototype.hasOwnProperty.call(data, field)) {
+        if (field === 'CS') {
+          NoCS = data[field].length;
+          CSNames = data[field].map((student) => student.firstname).join(', ');
+        }
+        if (field === 'SWE') {
+          NoSWE = data[field].length;
+          SWENames = data[field].map((student) => student.firstname).join(', ');
+        }
+      }
+    }
+    res.end(`This is the list of our students\nNumber of students: ${NoSWE + NoCS}\nNumber of students in CS: ${NoCS}. List: ${CSNames}\nNumber of students in SWE: ${NoSWE}. List: ${SWENames}`);
+  }).catch(() => {
+    res.statusCode = 404;
+    res.end('This is the list of our students\nCannot load the database');
+  });
 });
 app.listen(port, () => {
   console.log('server running');
