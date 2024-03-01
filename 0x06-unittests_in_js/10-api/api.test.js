@@ -26,20 +26,22 @@ describe('API integration test', () => {
     });
   });
 
-  it('test POST /login', () => {
+  it('test POST /login', (done) => {
     const data = {json: {userName: 'Betty'}};
     const header = {'Content-Type': 'application/json'};
     const url = `${API_URL}/login`;
     request.post(url, data, (error, res, body) => {
 		expect(res.statusCode).to.be.equal(200);
 		expect(body).to.be.equal('Welcome Betty');
+		done();
 	});
   });
-  it('test GET /available_payments', () => {
+  it('test GET /available_payments', (done) => {
     const url = `${API_URL}/available_payments`;
     request.get(url, (error, res, body) => {
 		expect(res.statusCode).to.be.equal(200);
 		expect(JSON.parse(body)).to.be.deep.equal({payment_methods: {credit_cards: true, paypal: false}});
+		done();
 	});
   });
 });
