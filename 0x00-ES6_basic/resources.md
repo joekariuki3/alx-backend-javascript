@@ -1,0 +1,29 @@
+## Links
+
+- https://savanna.alxafrica.com/concepts/852
+  - https://github.com/mbeaudru/modern-js-cheatsheet
+  - https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+  - https://darrenderidder.github.io/talks/ModulePatterns/#/
+  - https://www.youtube.com/watch?v=sjyJBL5fkp8
+  - https://www.youtube.com/watch?v=vZBCTc9zHtI
+  - https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Object_basics
+  - https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
+  - https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
+  - https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+  - https://alistapart.com/article/getoutbindingsituations/
+- https://savanna.alxafrica.com/concepts/542
+  - https://code.visualstudio.com/
+  - https://en.wikipedia.org/wiki/Lint_(software)
+  - https://eslint.org/
+  - https://pycodestyle.pycqa.org/en/latest/
+  -
+- https://www.w3schools.com/js/js_es6.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+- https://medium.com/data-science/javascript-es6-iterables-and-iterators-de18b54f4d4
+- https://jestjs.io/
+- https://eslint.org/
+-
